@@ -4,18 +4,29 @@
     background-color:rgb(139, 0, 0);
     text-align: center;
 }
-#dispositivo{
+.mobile{
     font-size: 60px;
     color: rgb(255, 255, 255);
 } 
-
+.tablet {
+    display: none;
+}
+.desktop{
+    display: none;
+}
 @media  (min-width: 800px )  {
     .barra{
         height: 150px;
         background-color: rgb(139, 0, 0);
     }
-    #dispositivo{
+    .mobile{
         display: none;
+    }
+    .tablet{
+        display: inline;
+        font-size: 70px;
+    color: rgb(255, 255, 255);
+    text-align: center;
     }
 }
 @media (min-width: 1228px){
@@ -23,6 +34,15 @@
     height: 200px;
     background-color: rgb(139, 0, 0);
  }
+.tablet {
+    display:none;
+}
+.desktop{
+    display: inline;
+    font-size: 80px;
+color: rgb(255, 255, 255);
+text-align: center;
+}
 }
 .rodape {
     text-align: center;

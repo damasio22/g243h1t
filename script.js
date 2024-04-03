@@ -1,52 +1,36 @@
-imprime = (msg) => console.log(msg);
-const data = new Date();
-function hora_atual(){
-    setTimeout(() => {
-        document.getElementById("h").innerHTML =  data.getHours() + ":" + data.getMinutes() + ":"  + data.getSeconds();
-        hora_atual();
-    },1000);
+function abrir(num){
+    for(let i = 1; i <= 5; i++){
+        let id_aba = "aba"+i;
+        let id_ab = "a"+i;
+        document.getElementById(id_aba).disabled = false;
+        document.getElementById(id_ab).style.display = "none";
+        
     }
     
+    if(num== "1"){
+        document.getElementById("aba1").disabled = true;
+        document.getElementById("a1").style.display = "block";
+    }
 
-fazerSorteio = () => {
-    num1 = document.getElementById("inicio").value;
-    num2 = document.getElementById("fim").value;
-    let sorteio = Math.floor( Math.random()* Number(num2) - Number(num1) +1);
-    document.getElementById("resultado").innerHTML = sorteio;
+    if(num== "2"){
+        document.getElementById("aba2").disabled = true;
+        document.getElementById("a2").style.display = "block";
+    }
 
+    if(num== "3"){
+        document.getElementById("aba3").disabled = true;
+        document.getElementById("a3").style.display = "block";
+    }
+
+    if(num== "4"){
+        document.getElementById("aba4").disabled = true;
+        document.getElementById("a4").style.display = "block";
+    }
+
+    if(num== "5"){
+        document.getElementById("aba5").disabled = true;
+        document.getElementById("a5").style.display = "block";
+    }
+
+     
 }
- function escolher_aba(btn){
-    for(let i = 1; i <= 4; i++){
-    let id_btn = "btn" + 1;
-    let id_aba = "ab" + 1;
-    document.getElementById(id_btn).style.backgroundColor= "blueviolet";
-    document.getElementById(id_btn).disabled = false;
-    document.getElementById(id_aba).style.display = "none";
-
-}
- 
-    if(btn == "1"){
-        document.getElementById("btn1").style.backgroundColor = "#0570";
-        document.getElementById("btn1").disabled = true;
-        document.getElementById("ab1").style.display = "block";
-        hora_atual();
-    }
-    if(btn == "2"){
-        document.getElementById("btn2").style.backgroundColor = "#0570";
-        document.getElementById("btn2").disabled = true;
-        document.getElementById("ab2").style.display = "block";
-
-    }
-    if(btn == "3"){
-        document.getElementById("btn3").style.backgroundColor = "#0570";
-        document.getElementById("btn3").disabled = true;
-        document.getElementById("ab3").style.display = "block";
-
-    }
-    if(btn == "4"){
-        document.getElementById("btn4").style.backgroundColor = "#0570";
-        document.getElementById("btn4").disabled = true;
-        document.getElementById("ab4").style.display = "block";
-    }   
-        
- }
